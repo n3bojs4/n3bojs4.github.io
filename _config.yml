@@ -4,7 +4,7 @@ title_right   : "Memory" # default: ""
 description   : "Dump Memory, read Memory, write Memory, same player play again !"
 keywords      : "Tech Sec DIY"
 url           : https:// # site url
-baseurl       : "https://n3bojs4.github.io/" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "/assets/images/peter_weller_as_bill_lee.jpg" # image uri like logo/cover image for site seo
 
 google_analytics  : UA-XXXXX-XX
