@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-26T00:44:43+02:00</updated><id>http://localhost:4000/feed.xml</id><subtitle>Dump Memory, read Memory, write Memory, same player play again !</subtitle><author><name>nebo</name></author><entry><title type="html">Ajouter un écran LCD à son imprimante 3D</title><link href="http://localhost:4000/2019/Octoprint-LCD1602/" rel="alternate" type="text/html" title="Ajouter un écran LCD à son imprimante 3D" /><published>2019-02-01T00:00:00+01:00</published><updated>2019-02-01T00:00:00+01:00</updated><id>http://localhost:4000/2019/Octoprint-LCD1602</id><content type="html" xml:base="http://localhost:4000/2019/Octoprint-LCD1602/">&lt;p&gt;Après avoir reçu mon nouveau joujou, j’ai voulu voir ce qu’on pouvait faire avec le port série de la bécane.
+Le firmware utilisé par Dagoma est open source, il s’agit de &lt;strong&gt;&lt;a href=&quot;http://marlinfw.org&quot;&gt;Marlin&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Le concept est assez simple, les machines a commande numériques utilise depuis très longtemps le &lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/G-code&quot;&gt;GCode&lt;/a&gt;&lt;/strong&gt;.
+Un slicer découpe des tranches dans le modèle 3D et pour chaque tranche il génère des Gcodes pour faire bouger la tête, extruder du filament etc…
+Marlin documente l’ensemble des Gcodes utilisés dans &lt;strong&gt;&lt;a href=&quot;http://marlinfw.org/meta/gcode/&quot;&gt;son firmware ici&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Il est donc possible de commander l’imprimante par le port USB (le port série quoi !). Dans un premier temps je me suis dit qu’il serait très intéressant
+de relier l’imprimante à un raspberry pour pouvoir la connecter à notre monde. En effet, cette imprimante ne dispose pas d’écran de contrôle.
+En parlant avec un collègue féru d’impression de ma nouvelle trouvaille , il m’a indiqué qu’un projet open-source existait déjà x_X (déception ?)&lt;/p&gt;
+
+&lt;p&gt;Ce projet s’appelle &lt;strong&gt;&lt;a href=&quot;https://octoprint.org&quot;&gt;octoprint&lt;/a&gt;&lt;/strong&gt; et est développé (en python) principalement par Gina Häußge à plein temps à priori.&lt;/p&gt;
+
+&lt;p&gt;L’idée est simple, on connecte un raspberry au port série d’une imprimante et on peut la contrôler à distance :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;upload des fichiers d’impression&lt;/li&gt;
+  &lt;li&gt;slicing&lt;/li&gt;
+  &lt;li&gt;webcam&lt;/li&gt;
+  &lt;li&gt;température de la buse&lt;/li&gt;
+  &lt;li&gt;contrôle manuel avec des touches directionnelles&lt;/li&gt;
+  &lt;li&gt;plugins à gogo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La documentation est très bien faite, j’ai donc décidé de développer mon plugin pour un afficheur LCD 16x2(&lt;strong&gt;&lt;a href=&quot;HD44780.pdf&quot;&gt;Hitachi HD44780&lt;/a&gt;&lt;/strong&gt;) qu’on trouve facilement pour moins de 5 euros. J’utilise un afficheur avec un module PCF8574 fournissant l’I2C.
+Le plugin est disponible sur la page officielle des &lt;strong&gt;&lt;a href=&quot;https://plugins.octoprint.org/plugins/LCD1602_I2cdisplay/&quot;&gt;plugins octoprint&lt;/a&gt;&lt;/strong&gt;
+Le code source est &lt;strong&gt;&lt;a href=&quot;https://github.com/n3bojs4/octoprint-LCD1602&quot;&gt;sur mon github&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Enjoy :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/schema.png&quot; alt=&quot;schéma&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/connected.jpeg&quot; alt=&quot;connection mode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/progress.jpeg&quot; alt=&quot;progress bar&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ressource:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Doc dev plugin octoprint : &lt;strong&gt;&lt;a href=&quot;https://docs.octoprint.org/en/master/plugins/&quot;&gt;ici&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;lib i2c pour le hd44780 : &lt;strong&gt;&lt;a href=&quot;https://rplcd.readthedocs.io&quot;&gt;https://rplcd.readthedocs.io&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;datasheet afficheur : &lt;strong&gt;&lt;a href=&quot;HD44780.pdf&quot;&gt;Hitachi HD44780&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nebo</name></author><summary type="html">Après avoir reçu mon nouveau joujou, j’ai voulu voir ce qu’on pouvait faire avec le port série de la bécane. Le firmware utilisé par Dagoma est open source, il s’agit de Marlin.</summary></entry><entry><title type="html">Neva Magis: une imprimante pour les noobs ?</title><link href="http://localhost:4000/2019/NevaMagis/" rel="alternate" type="text/html" title="Neva Magis: une imprimante pour les noobs ?" /><published>2019-01-29T00:00:00+01:00</published><updated>2019-01-29T00:00:00+01:00</updated><id>http://localhost:4000/2019/NevaMagis</id><content type="html" xml:base="http://localhost:4000/2019/NevaMagis/">&lt;p&gt;Pour mon anniversaire mes proches ont été très gentils :)
+J’ai eu une neva magis de chez Dagoma le fabricant français d’imprimante 3d.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/magis.jpeg&quot; alt=&quot;Neva Magis&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ce type d’imprimante est considérée par certains comme l’imprimante de Monsieur Tout le monde qui souhaite se mettre à l’impression 3D.
+En effet quand je me suis renseigné sur les modèles j’ai visionné pas mal de vidéos youtube où on voit des imprimantes chinoises.
+Souvent ces imprimantes sont vendus comme beaucoup plus réglables et difficiles à faire fonctionner.&lt;/p&gt;
+
+&lt;p&gt;A suivre :)&lt;/p&gt;</content><author><name>nebo</name></author><summary type="html">Pour mon anniversaire mes proches ont été très gentils :) J’ai eu une neva magis de chez Dagoma le fabricant français d’imprimante 3d.</summary></entry><entry><title type="html">SNMP my love</title><link href="http://localhost:4000/2019/Snmp_mylove/" rel="alternate" type="text/html" title="SNMP my love" /><published>2019-01-14T00:00:00+01:00</published><updated>2019-01-14T00:00:00+01:00</updated><id>http://localhost:4000/2019/Snmp_mylove</id><content type="html" xml:base="http://localhost:4000/2019/Snmp_mylove/">&lt;p&gt;Dans le cadre de la mise en place de zabbix en tant que monitoring, j’ai du résoudre un certains nombres de problèmes.&lt;/p&gt;
+
+&lt;p&gt;J’avais à monitorer un chassis C7000 HP, j’ai donc utilisé le template disponible sur le site de zabbix ( &lt;a href=&quot;https://zabbix.org/mw/images/e/eb/HP_C7000.zip&quot;&gt;lien vers le template&lt;/a&gt; ).
+Ce template a été écrit par un russe (Vladimir Marakshin) j’ai donc eu à modifier quelques valeurs et à ajouter des mappings dans la section Value Mapping (voir le readme dans le zip).
+Malgré tout ça j’avais des erreurs de type “&lt;strong&gt;snmp_parse_oid(): Cannot parse OID cpqRackPowerEnclosureRedundant&lt;/strong&gt;”&lt;/p&gt;
+
+&lt;p&gt;Pour résoudre ce problème j’ai édité les items afin d’ajouter le bon OID correspondant.
+Pour cela j’ai utilisé snmpget en m’appuyant sur la MIB HP CPQRACK  (voir &lt;a href=&quot;http://www.oidview.com/mibs/232/CPQRACK-MIB.html&quot;&gt;ce lien&lt;/a&gt; )&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;snmpget -v 2c -c YourCommunity 192.168.1.254 1.3.6.1.4.1.232.22.2.3.1.1.1.8.1
+
+SNMPv2-SMI::enterprises.232.22.2.3.1.1.1.8.1 = STRING: &quot;4.85&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Dans cet exemple on retourne la version de firmware du chassis : &lt;strong&gt;4.85&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;J’ai fait la modification pour trouver l’état de l’alimentation de secours (voir ci-dessous).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/images/capture_zabbix.png&quot;&gt;&lt;img src=&quot;/assets/images/capture_zabbix.png&quot; alt=&quot;Capture Zabbix&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>nebo</name></author><summary type="html">Dans le cadre de la mise en place de zabbix en tant que monitoring, j’ai du résoudre un certains nombres de problèmes.</summary></entry><entry><title type="html">Resolutions 2019</title><link href="http://localhost:4000/2019/Resolutions-2019/" rel="alternate" type="text/html" title="Resolutions 2019" /><published>2019-01-01T00:00:00+01:00</published><updated>2019-01-01T00:00:00+01:00</updated><id>http://localhost:4000/2019/Resolutions-2019</id><content type="html" xml:base="http://localhost:4000/2019/Resolutions-2019/">&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Tu finiras les projets que tu entreprendras&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tu écriras régulièrement tes mémoires pour éviter qu’elles ne s’envolent&lt;/strong&gt; –&amp;gt; Ton super blog propulsé par &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tu enléveras les épines de tes pieds qui trainent depuis si longtemps !&lt;/strong&gt; ex: 2 Janvier relire le concept de X509.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>nebo</name></author><summary type="html">Tu finiras les projets que tu entreprendras Tu écriras régulièrement tes mémoires pour éviter qu’elles ne s’envolent –&amp;gt; Ton super blog propulsé par Jekyll. Tu enléveras les épines de tes pieds qui trainent depuis si longtemps ! ex: 2 Janvier relire le concept de X509.</summary></entry></feed>

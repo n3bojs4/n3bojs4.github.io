@@ -1,0 +1,14 @@
+---
+title: Liens
+layout: default
+---
+<nav>
+        {% for categorie in site.data.links.Categories %}
+          <h3 class="category-title"><u>{{ categorie[0] }}</u></h2>
+          {% for site in categorie[1].sites %}  
+            <a class="link" href="{{ site.link }}">{{ site.name }}</a>: {{ site.description }}
+            <br>
+            <br>
+          {% endfor %}       
+        {% endfor %}
+</nav>

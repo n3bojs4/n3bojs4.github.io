@@ -1,0 +1,16 @@
+Categories:
+  Infosec:
+    sites: 
+      - name: GTFOBins
+        description: Exploits sur les binaires Unix
+        link: https://gtfobins.github.io/
+      - name: EXPLOIT DATABASE
+        description: Bdd d'exploits connue de tous
+        link: https://www.exploit-db.com/
+
+  Impression 3d:
+    sites:
+      - name: Thingiverse
+        description: Repository de modèles 3D
+        link: https://www.thingiverse.com/
+
