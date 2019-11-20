@@ -71,6 +71,18 @@ ajouter un tag :
 ### Openssl <a id="openssl">
 ----------
 
+
+Lire un fichier de certificat :
+
+```bash
+openssl x509 -in My.crt -text -noout
+```
+
+Vérifier un certificat en ligne : 
+```bash
+openssl s_client -connect example.com:443
+```
+
 #### Centos 7 <a id="centos">
 
 - ajouter une CA :
@@ -83,7 +95,16 @@ cp foo.crt /etc/pki/ca-trust/source/anchors/
 
 update-ca-trust extract
 ```
- 
+
+#### Debian
+
+- ajouter une CA :
+
+```bash
+mkdir /usr/local/share/ca-certificates/extra
+cp foo.crt /usr/local/share/ca-certificates/extra/foo.crt
+update-ca-certificates --fresh
+```
 ### Windows <a id="windows">
 -----------
 
