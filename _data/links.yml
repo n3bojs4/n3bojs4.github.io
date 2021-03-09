@@ -7,6 +7,10 @@ Categories:
       - name: EXPLOIT DATABASE
         description: Bdd d'exploits connue de tous
         link: https://www.exploit-db.com/
+      - name: XSS common techniques
+        description: practical examples
+        link: https://pentest-tools.com/blog/xss-attacks-practical-scenarios/#xss-attack-2
+        
 
   Impression 3d:
     sites:
