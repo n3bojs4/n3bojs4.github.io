@@ -11,6 +11,12 @@ Categories:
         description: practical examples
         link: https://pentest-tools.com/blog/xss-attacks-practical-scenarios/
         
+  Admin Tools:
+    sites:
+      - name: Network port checker
+        description: Test TCP/UDP ports online from various country
+        link: https://check-host.net/check-udp
+
 
   Impression 3d:
     sites:
