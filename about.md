@@ -11,6 +11,6 @@ title: About
    
     
     <img src="/assets/images/walker.gif">
-    <img src="https://www.root-me.org/?page=badge.svg&var_mode=recalcul&id_auteur=63818">
+    <img src="<img src="https://root-me-badge.cloud.duboc.xyz/storage_clients/0ae9a4520f92cddcd362cbcb32219687/static_badge_dark.png" />">
   </div>
 </section>
