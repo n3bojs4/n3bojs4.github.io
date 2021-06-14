@@ -11,6 +11,8 @@ title: About
    
     
     <img src="/assets/images/walker.gif">
-    <img src="https://root-me-badge.cloud.duboc.xyz/storage_clients/0ae9a4520f92cddcd362cbcb32219687/static_badge_dark.png" />
+    <br>
+    <br>
+    <script src="https://root-me-badge.cloud.duboc.xyz/storage_clients/0ae9a4520f92cddcd362cbcb32219687/badge.js"></script>
   </div>
 </section>
