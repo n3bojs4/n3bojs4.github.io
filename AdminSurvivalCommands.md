@@ -129,8 +129,9 @@ vi /etc/systemd/system/docker.service.d/http-proxy.conf
 systemctl daemon-reload
 systemctl restart docker
 ```
+other example here : https://docs.docker.com/config/daemon/systemd/#httphttps-proxy
 
-```vim
+ ```vim
 # /etc/systemd/system/docker.service.d/http-proxy.conf
 [Service]
 Environment="HTTP_PROXY=http://xx.xx.xx.xx:xxxx/"
